@@ -38,8 +38,8 @@ struct file_info
 
 struct file_data
 {
-    void* Data;
-    size_t Size;
+    	void* Data;
+    	size_t Size;
 	file_info Info;
 	status_code StatusCode;
 };
@@ -197,8 +197,7 @@ file_type GetFileType(char* FileName)
 	while(FileName[Index++] != '.');
 	
 	char* FileType = &FileName[Index];
-	char* FileTypeEnd = GetNextCharacter(FileName, strlen(FileName), 
-											FileType, ' ');
+	char* FileTypeEnd = GetNextCharacter(FileName, strlen(FileName), FileType, ' ');
 	size_t Length = FileTypeEnd - FileType;
 	
 	printf("FileType: %c\n", FileType[0]);
